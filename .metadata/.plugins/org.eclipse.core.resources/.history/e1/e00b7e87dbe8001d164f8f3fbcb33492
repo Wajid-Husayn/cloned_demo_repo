@@ -1,0 +1,12 @@
+Feature: Test login functionality
+
+  Scenario Outline: Check login is successfull with valid credentials
+    Given browser is opened
+    And user is on login paged
+    When user entered <username> and <password>
+    Then user is navigated to homepages
+
+    Examples: 
+      | username | password |
+      | Raghave  |    12345 |
+      | Ele      |    12345 |

@@ -1,0 +1,47 @@
+package StepDefination;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
+public class Usecase {
+	
+	WebDriver driver = null;
+
+	@Given("user is page1")
+	public void user_is_page1() {
+
+		System.out.println("Inside Step- browser is open");
+		System.setProperty("webdriver.chrome.driver","./src/test/resources/drivers/chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
+		
+		driver = new ChromeDriver(options);
+	
+	}
+
+	@And("user enter credentials")
+	public void user_enter_credentials() {
+		driver.navigate().to("https://practicetestautomation.com/practice-test-login/");
+		driver.findElement(By.id("username")).sendKeys("student");
+		driver.findElement(By.id("password")).sendKeys("Password123");
+		
+	}
+
+	@When("user click on button to login")
+	public void user_click_on_button_to_login() {
+		driver.findElement(By.id("submit")).click();
+	}
+
+	@Then("Hurray we are successful")
+	public void hurray_we_are_successful() {
+	    System.out.println("Executed succesfuly");
+	}
+
+}

@@ -1,0 +1,63 @@
+package pagefactory;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import pages.loginPage;
+
+
+public class LoginPage_Background {
+	
+	@FindBy(name ="username")
+	WebElement txt_username;
+
+	@FindBy(name = "password")
+	WebElement txt_password;
+	
+	@FindBy(css = ".oxd-button")
+	WebElement btn_login;
+	
+	@FindBy(css = "css=.bi-caret-down-fill")
+	WebElement btn_dropdown;
+	@FindBy(linkText="Logout")
+	WebElement txt_display;
+	
+	@FindBy(xpath="//p[contains(.,'Quick Launch')]")
+	WebElement txt1_display;
+	WebDriver driver ;
+	public  LoginPage_Background(WebDriver driver) {
+		this.driver = driver;
+		//PageFactory.initElements(driver, LoginPage_PF.class);
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	public void enterUsername() {
+		
+		txt_username.sendKeys("Admin");
+	}
+	
+	public void enterPassword() {
+		
+		txt_password.sendKeys("admin123");
+	}
+	
+	public void clickOnLogin() {
+		btn_login.click();
+	}
+	
+	public void clickonDropDown() {
+		btn_dropdown.click();
+	}
+	
+	public void logoutDisplayed() {
+		txt_display.isDisplayed();
+		
+	}
+	public void textDisplayed() {
+		txt1_display.isDisplayed();
+		
+	}
+}

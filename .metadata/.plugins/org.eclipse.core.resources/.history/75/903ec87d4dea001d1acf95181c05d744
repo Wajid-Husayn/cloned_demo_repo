@@ -1,0 +1,50 @@
+package pagefactory;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import pages.loginPage;
+
+
+public class LoginPage_Background {
+	
+	@FindBy(name = "username")
+	WebElement txt_username;
+
+	@FindBy(name = "password")
+	WebElement txt_password;
+	
+	@FindBy(xpath = "//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button")
+	WebElement btn_login;
+	
+	//@FindBy()
+	//WebElement btn_dropdown;
+	
+	WebDriver driver ;
+	public  LoginPage_Background(WebDriver driver) {
+		this.driver = driver;
+		//PageFactory.initElements(driver, LoginPage_PF.class);
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	public void enterUsername() {
+		
+		txt_username.sendKeys("Admin");
+	}
+	
+	public void enterPassword() {
+		
+		txt_password.sendKeys("admin123");
+	}
+	
+	public void clickOnLogin() {
+		btn_login.click();
+	}
+	
+	//public void clickonDropDown() {
+		
+	//}
+}

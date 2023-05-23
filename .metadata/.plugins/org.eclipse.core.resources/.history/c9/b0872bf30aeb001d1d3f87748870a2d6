@@ -1,0 +1,82 @@
+package StepsForBackground;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import pagefactory.HomePage_Background;
+import pagefactory.HomePage_PF;
+import pagefactory.LoginPage_Background;
+import pagefactory.LoginPage_PF;
+
+public class BackgroundDemoSteps {
+
+//	 WebDriver driver = null;
+//	  LoginPage_Background login;
+//	  HomePage_Background home;
+//	  
+//	@Given("user is on login page")
+//	public void user_is_on_login_page() {System.out.println("Inside Step- browser is open=== Background");
+//	System.setProperty("webdriver.chrome.driver","./src/test/resources/drivers/chromedriver.exe");
+//	ChromeOptions options = new ChromeOptions();
+//	options.addArguments("--remote-allow-origins=*");
+//	
+//	driver = new ChromeDriver(options);
+//	//driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+//	//driver.manage().timeouts().pageLoadTimeout(40,TimeUnit.SECONDS);
+//	//driver.navigate().to("https://google.com");
+//
+//	driver.navigate().to("https://example.testproject.io/web/");
+//	driver.manage().window().maximize();
+//		
+//	}
+//
+//	@When("user enters username and password")
+//	public void user_enters_username_and_password() {
+//		login = new LoginPage_Background(driver);
+//		login.enterUsername();
+//		login.enterPassword();
+//	}
+//
+//	@And("clicks on login button")
+//	public void clicks_on_login_button() {
+//		login.clickOnLogin();
+//	}
+//
+//	@Then("user is navigated to the homepage")
+//	public void user_is_navigated_to_the_homepage() {
+//	}
+//
+//	//@Given("user is logged in")
+//	//public void user_is_logged_in() {
+//	//}
+//
+//	
+//	@When("user click on username dropdown")
+//	public void user_click_on_username_dropdown() {
+//		login.logout();
+//	}
+//
+//	@Then("logout link is displayed")
+//	public void logout_link_is_displayed() {
+//		login.logout();
+//	}
+//
+//	@When("user clicks on dashboard link")
+//	public void user_clicks_on_dashboard_link() {
+//		System.out.println("this is a background test");
+//	}
+//
+//	@Then("quick launch toolbar is displayed")
+//	public void quick_launch_toolbar_is_displayed() {
+//		login.textDisplayed();
+//		
+//		
+//	}
+//
+//
+}

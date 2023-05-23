@@ -1,0 +1,9 @@
+package test;
+
+public class FirstSeleniumTest {
+	
+	public static void main(String[] args) {
+	
+		Webdriver driver = new FirefoxDriver();
+	}
+}
